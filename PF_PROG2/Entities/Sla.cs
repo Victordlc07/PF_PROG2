@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PF_PROG2.Entities
 {
-    class Sla
+    public class Sla
     {
         public int SlaId { get; set; }
         public string Descripcion { get; set; }

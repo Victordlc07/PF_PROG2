@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PF_PROG2.Entities
 {
-    class Puesto
+    public class Puesto
     {
         public int PuestoId { get; set; }
         public int DepartamentoId { get; set; }
