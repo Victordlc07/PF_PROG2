@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace PF_PROG2.Entities
 {
-    class Usuario
+    public class Usuario : BaseEntity
     {
-        public int UsuarioId { get; set; }
 
         public int PuestoId { get; set; }
-        public Puesto Puestos { get; set; }
+        public Puesto Puesto { get; set; }
         
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -20,15 +19,22 @@ namespace PF_PROG2.Entities
         public string Telefono { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string NombreUsuario { get; set; }
+<<<<<<< HEAD
         public string Constasena { get; set; }
-        public string Estatus { get; set; }
-        public bool Borrado { get; set; }
+      //  public string Estatus { get; set; }
+      //  public bool Borrado { get; set; }
         public DateTime FechaRegistro { get; set; }
         public DateTime FechaModificacion { get; set; }
-        public int CreadoPor { get; set; }
-        public int ModificadoPor { get; set; }
+     //   public int CreadoPor { get; set; }
+      //  public int ModificadoPor { get; set; }
+=======
+        public string Contrasena { get; set; }
 
-        
+        public List <Incidente> Incidentes { get; set; }
+        public List <HistorialIncidente> historialIncidentes { get; set; }
+        public List <Prioridad> Prioridades { get; set; }
+>>>>>>> ae7169d24bf84ba7b411c2b3939a3dd2c8d794c6
+
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PF_PROG2.Entities
 {
-    class Departamento :BaseEntity
+    public class Departamento : BaseEntity
     {
         //Propiedad unica de esta entidad
         public string Nombre { get; set; }
