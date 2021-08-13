@@ -9,19 +9,8 @@ namespace PF_PROG2.Entities
     public class HistorialIncidente : BaseEntity
     {
         public int IncidenteId { get; set; }
-<<<<<<< HEAD
-        public Incidente Incidentes { get; set; }
-        public string Comentario { get; set; }
-        //public string Estatus { get; set; }
-        //public bool Borrado { get; set; }
-        public DateTime FechaRegistro { get; set; }
-        public DateTime FechaModificacion { get; set; }
-       // public int CreadoPor { get; set; }
-       // public int ModificadoPor { get; set; }
-=======
         public Incidente Incidente { get; set; }
         public string Comentario { get; set; }
 
->>>>>>> ae7169d24bf84ba7b411c2b3939a3dd2c8d794c6
     }
 }
