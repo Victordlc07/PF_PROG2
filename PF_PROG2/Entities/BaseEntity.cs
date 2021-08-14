@@ -8,7 +8,7 @@ namespace PF_PROG2.Entities
 {
     public class BaseEntity //Esta es la clase COMUN que tiene las propiedades comunes de todas las entidades.
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Estatus { get; set; }
         public int Borrado { get; set; }
         public DateTime? FechaRegistro { get; set; }
