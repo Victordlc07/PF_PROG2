@@ -31,8 +31,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad departamento.
             #region Departamento
 
-            modelBuilder.Entity<Departamento>().ToTable("Departamento").HasKey(k => k.ID);
-            modelBuilder.Entity<Departamento>().Property(p => p.ID).HasColumnName("DepartamentoID");
+            modelBuilder.Entity<Departamento>().ToTable("Departamento").HasKey(k => k.Id);
+            modelBuilder.Entity<Departamento>().Property(p => p.Id).HasColumnName("DepartamentoID");
             modelBuilder.Entity<Departamento>().Property(P => P.Nombre).HasMaxLength(100).HasColumnType("varchar").IsRequired();
 
             //Comunes
@@ -48,8 +48,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad Puesto
             #region Puesto
 
-            modelBuilder.Entity<Puesto>().ToTable("Puesto").HasKey(k => k.ID);
-            modelBuilder.Entity<Puesto>().Property(p => p.ID).HasColumnName("PuestoID");
+            modelBuilder.Entity<Puesto>().ToTable("Puesto").HasKey(k => k.Id);
+            modelBuilder.Entity<Puesto>().Property(p => p.Id).HasColumnName("PuestoID");
             modelBuilder.Entity<Puesto>().Property(P => P.DepartamentoId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Puesto>().Property(P => P.Nombre).HasMaxLength(100).HasColumnType("varchar").IsRequired();
 
@@ -66,8 +66,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad Usuario
             #region Usuario
 
-            modelBuilder.Entity<Usuario>().ToTable("Usuario").HasKey(k => k.ID);
-            modelBuilder.Entity<Usuario>().Property(p => p.ID).HasColumnName("UsuarioID");
+            modelBuilder.Entity<Usuario>().ToTable("Usuario").HasKey(k => k.Id);
+            modelBuilder.Entity<Usuario>().Property(p => p.Id).HasColumnName("UsuarioID");
             modelBuilder.Entity<Usuario>().Property(P => P.PuestoId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Usuario>().Property(P => P.Nombre).HasMaxLength(100).HasColumnType("varchar").IsRequired();
             modelBuilder.Entity<Usuario>().Property(P => P.Apellido).HasMaxLength(100).HasColumnType("varchar").IsRequired();
@@ -91,8 +91,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad SLA
             #region SLA
 
-            modelBuilder.Entity<Sla>().ToTable("SLA").HasKey(k => k.ID);
-            modelBuilder.Entity<Sla>().Property(p => p.ID).HasColumnName("SLAID");
+            modelBuilder.Entity<Sla>().ToTable("SLA").HasKey(k => k.Id);
+            modelBuilder.Entity<Sla>().Property(p => p.Id).HasColumnName("SLAID");
             modelBuilder.Entity<Sla>().Property(P => P.Descripcion).HasMaxLength(200).HasColumnType("varchar").IsRequired();
             modelBuilder.Entity<Sla>().Property(P => P.CantidadHoras).HasColumnType("int").IsRequired();
 
@@ -109,8 +109,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad Prioridad
             #region Prioridad
 
-            modelBuilder.Entity<Prioridad>().ToTable("Prioridad").HasKey(k => k.ID);
-            modelBuilder.Entity<Prioridad>().Property(p => p.ID).HasColumnName("PrioridadID");
+            modelBuilder.Entity<Prioridad>().ToTable("Prioridad").HasKey(k => k.Id);
+            modelBuilder.Entity<Prioridad>().Property(p => p.Id).HasColumnName("PrioridadID");
             modelBuilder.Entity<Prioridad>().Property(P => P.SlaId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Prioridad>().Property(P => P.Nombre).HasMaxLength(50).HasColumnType("varchar").IsRequired();
 
@@ -127,8 +127,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad Incidente
             #region Incidente
 
-            modelBuilder.Entity<Incidente>().ToTable("Incidente").HasKey(k => k.ID);
-            modelBuilder.Entity<Incidente>().Property(p => p.ID).HasColumnName("IncidenteID");
+            modelBuilder.Entity<Incidente>().ToTable("Incidente").HasKey(k => k.Id);
+            modelBuilder.Entity<Incidente>().Property(p => p.Id).HasColumnName("IncidenteID");
             modelBuilder.Entity<Incidente>().Property(P => P.UsuarioReportaId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Incidente>().Property(P => P.UsuarioAsignadoId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<Incidente>().Property(P => P.PrioridadId).HasColumnType("int").IsRequired();
@@ -151,8 +151,8 @@ namespace PF_PROG2.Context
             //Fluent API de la entidad HistorialIncidente
             #region HistorialIncidente
 
-            modelBuilder.Entity<HistorialIncidente>().ToTable("HistorialIncidente").HasKey(k => k.ID);
-            modelBuilder.Entity<HistorialIncidente>().Property(p => p.ID).HasColumnName("HistorialIncidenteID");
+            modelBuilder.Entity<HistorialIncidente>().ToTable("HistorialIncidente").HasKey(k => k.Id);
+            modelBuilder.Entity<HistorialIncidente>().Property(p => p.Id).HasColumnName("HistorialIncidenteID");
             modelBuilder.Entity<HistorialIncidente>().Property(P => P.IncidenteId).HasColumnType("int").IsRequired();
             modelBuilder.Entity<HistorialIncidente>().Property(P => P.Comentario).HasMaxLength(500).HasColumnType("varchar").IsRequired();
 

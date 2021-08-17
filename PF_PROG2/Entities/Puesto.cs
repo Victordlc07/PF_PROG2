@@ -13,5 +13,7 @@ namespace PF_PROG2.Entities
         public string Nombre { get; set; }
 
         public List<Usuario> Usuarios { get; set; }
-}
+
+        
+    }
 }
