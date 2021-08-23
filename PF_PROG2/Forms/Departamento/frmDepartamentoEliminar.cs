@@ -44,6 +44,7 @@ namespace PF_PROG2
                 {
                     MessageBox.Show("El departamento fue eliminado.");
                     FillDGvDepartamentos();
+                    txtIdDepartamento.Text = string.Empty;
                 }
                 else
                 {
@@ -54,7 +55,7 @@ namespace PF_PROG2
 
         private void dgvDepartamentos_MouseClick(object sender, MouseEventArgs e)
         {
-            txtIdDepartamento.Text = dgvDepartamentos.CurrentRow.Cells["Id"].Value.ToString();
+            txtIdDepartamento.Text = dgvDepartamentos.CurrentRow.Cells["Nombre"].Value.ToString();
         }
 
         private void frmDepartamentoEliminar_Load(object sender, EventArgs e)

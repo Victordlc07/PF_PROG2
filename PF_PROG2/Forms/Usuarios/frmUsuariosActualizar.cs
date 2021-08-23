@@ -14,6 +14,7 @@ namespace PF_PROG2.Forms.Usuarios
     public partial class frmUsuariosActualizar : Form
     {
         UsuarioRepository usuariorepository = new UsuarioRepository();
+        PuestoRepository puestoRepository = new PuestoRepository();
         public frmUsuariosActualizar()
         {
             InitializeComponent();
@@ -21,9 +22,34 @@ namespace PF_PROG2.Forms.Usuarios
 
         private void FillDGvUsuarios() //Metodo privado para llenar de DGV con el metodo GetAll
         {
-            dgvUsuarios.DataSource = usuariorepository.GetAll();
+            //dgvUsuarios.DataSource = usuariorepository.GetAll();
+            #region Acutializar_DataGridView
+            var lista = usuariorepository.GetAll();
+            var lista2 = new List<DatosUsuario>();
 
-            //Cargar puestos en el comboBox
+            foreach (var item in lista)
+            {
+                var datos = new DatosUsuario()
+                {
+                    Id = item.Id,
+                    Nombre = item.Nombre,
+                    Apellido = item.Apellido,
+                    Nombre_Usuario = item.NombreUsuario,
+                    Puesto = puestoRepository.FindById(item.PuestoId).Nombre,
+                    Cedula = item.Cedula,
+                    Correo = item.Correo,
+                    Telefono = item.Telefono,
+                    FechaNacimiento = (DateTime)item.FechaNacimiento,
+                    Contrasena = item.Contrasena
+                };
+
+                lista2.Add(datos);
+            }
+
+            dgvUsuarios.DataSource = lista2;
+            #endregion
+
+            #region ComboBox Puesto
             PuestoRepository puestoRepo = new PuestoRepository();
             var listaDepa = puestoRepo.GetAll();
 
@@ -34,9 +60,10 @@ namespace PF_PROG2.Forms.Usuarios
                 cbPuesto.Items.Add(list.Nombre);
                 listaIDPuesto.Add(list.Id);
             }
+            #endregion
         }
 
-            private void frmUsuariosActualizar_Load(object sender, EventArgs e)
+        private void frmUsuariosActualizar_Load(object sender, EventArgs e)
         {
             FillDGvUsuarios();
         }
@@ -89,7 +116,6 @@ namespace PF_PROG2.Forms.Usuarios
                 txtNombreUsuario.Text = string.Empty;
                 txtTelefono.Text = string.Empty;
                 cbPuesto.Text = string.Empty;
-
             }
         }
 
@@ -101,7 +127,9 @@ namespace PF_PROG2.Forms.Usuarios
             txtCorreo.Text = dgvUsuarios.CurrentRow.Cells["Correo"].Value.ToString();
             txtFechaNacimiento.Text = dgvUsuarios.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
             txtTelefono.Text = dgvUsuarios.CurrentRow.Cells["Telefono"].Value.ToString();
-            txtNombreUsuario.Text = dgvUsuarios.CurrentRow.Cells["NombreUsuario"].Value.ToString();
+            txtNombreUsuario.Text = dgvUsuarios.CurrentRow.Cells["Nombre_Usuario"].Value.ToString();
+            cbPuesto.Text = dgvUsuarios.CurrentRow.Cells["Puesto"].Value.ToString();
+            txtContrasena.Text = dgvUsuarios.CurrentRow.Cells["Contrasena"].Value.ToString();
         }
 
         private void atrásToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,6 +146,21 @@ namespace PF_PROG2.Forms.Usuarios
             txtFechaNacimiento.Text = string.Empty;
             txtTelefono.Text = string.Empty;
             txtNombreUsuario.Text = string.Empty;
+        }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosUsuario
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
+            public string Nombre_Usuario { get; set; }
+            public string Puesto { get; set; }
+            public string Cedula { get; set; }
+            public string Correo { get; set; }
+            public DateTime FechaNacimiento { get; set; }
+            public string Telefono { get; set; }
+            public string Contrasena { get; set; }
         }
     }
 }

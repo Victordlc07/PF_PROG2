@@ -30,9 +30,27 @@ namespace PF_PROG2.Forms.Puestos
 
         private void FillDGvPuestos() //Metodo para llenar el DGV con el metodo GetAll
         {
-            dgvPuestos.DataSource = puestoRepository.GetAll().Select(x => new { x.DepartamentoId, x.Nombre }).ToList();
+            //dgvPuestos.DataSource = puestoRepository.GetAll().Select(x => new { x.DepartamentoId, x.Nombre }).ToList();
             
-            //Llenar comboBox con los departamentos
+            #region Acutializar_DataGridView
+            var lista = puestoRepository.GetAll();
+            var lista2 = new List<DatosPuesto>();
+
+            foreach (var item in lista)
+            {
+                var datos = new DatosPuesto()
+                {
+                    Id = item.Id,
+                    Puesto = item.Nombre,
+                    Departamento = departamentoRepository.FindById(item.DepartamentoId).Nombre
+                };
+
+                lista2.Add(datos);
+            }
+            dgvPuestos.DataSource = lista2;
+            #endregion
+
+            #region ComboBox Departamento
 
             var listadep = departamentoRepository.GetAll();
             List<int> listaIDDepar = new List<int>();
@@ -42,6 +60,8 @@ namespace PF_PROG2.Forms.Puestos
                 cbDepartamentos.Items.Add(list.Nombre);
                 listaIDDepar.Add(list.Id);
             }
+            #endregion
+
         }
 
 
@@ -70,16 +90,12 @@ namespace PF_PROG2.Forms.Puestos
                 pues.DepartamentoId = listaIDDepar[cbDepartamentos.SelectedIndex];
                 puestoRepository.Create(pues);
 
-                //Tratar de vincular la clase Puesto con OperationResult
-                // OperationResult resultupdt = puestoRepository.Create(pues);
                 if (pues.Nombre != "")
                 {
-                    MessageBox.Show("Los Datos han sido actualizados.");
+                    MessageBox.Show("El departamento ha sido creado");
                     FillDGvPuestos();
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error en la actualizacion, comunicarse con el Administrador de TI.");
+                    txtNombreDpt.Text = string.Empty;
+                    cbDepartamentos.Text = string.Empty;
                 }
                 
             }
@@ -129,5 +145,14 @@ namespace PF_PROG2.Forms.Puestos
         {
 
         }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosPuesto
+        {
+            public int Id { get; set; }
+            public string Puesto { get; set; }
+            public string Departamento { get; set; }
+        }
+
     }
 }

@@ -77,6 +77,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.txtIdUsuario.Location = new System.Drawing.Point(51, 150);
             this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.ReadOnly = true;
             this.txtIdUsuario.Size = new System.Drawing.Size(229, 20);
             this.txtIdUsuario.TabIndex = 25;
             // 

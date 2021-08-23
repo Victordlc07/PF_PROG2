@@ -40,6 +40,7 @@ namespace PF_PROG2.Forms.Puestos
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvPuestos = new System.Windows.Forms.DataGridView();
+            this.bntUpdtDgv = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).BeginInit();
             this.SuspendLayout();
@@ -153,11 +154,25 @@ namespace PF_PROG2.Forms.Puestos
             this.dgvPuestos.Size = new System.Drawing.Size(602, 201);
             this.dgvPuestos.TabIndex = 10;
             // 
+            // bntUpdtDgv
+            // 
+            this.bntUpdtDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bntUpdtDgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntUpdtDgv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bntUpdtDgv.Location = new System.Drawing.Point(582, 27);
+            this.bntUpdtDgv.Name = "bntUpdtDgv";
+            this.bntUpdtDgv.Size = new System.Drawing.Size(51, 59);
+            this.bntUpdtDgv.TabIndex = 16;
+            this.bntUpdtDgv.Text = "⟲";
+            this.bntUpdtDgv.UseVisualStyleBackColor = false;
+            this.bntUpdtDgv.Click += new System.EventHandler(this.bntUpdtDgv_Click);
+            // 
             // frmPuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 476);
+            this.Controls.Add(this.bntUpdtDgv);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCrear);
@@ -189,5 +204,6 @@ namespace PF_PROG2.Forms.Puestos
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvPuestos;
+        private System.Windows.Forms.Button bntUpdtDgv;
     }
 }

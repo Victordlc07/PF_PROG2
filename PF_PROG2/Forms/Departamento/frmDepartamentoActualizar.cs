@@ -14,6 +14,7 @@ namespace PF_PROG2.Forms
     public partial class frmDepartamentoActualizar : Form
     {
         DepartamentoRepository departamentoRepository = new DepartamentoRepository();
+        UsuarioRepository usuarioRepository = new UsuarioRepository();
 
         public frmDepartamentoActualizar()
         {
@@ -44,11 +45,11 @@ namespace PF_PROG2.Forms
             else
             {
                 var info = departamentoRepository.FindById(Convert.ToInt32(dgvDepartamentos.CurrentRow.Cells["Id"].Value)); //variable para buscar en la base de datos basado en el ID seleccioando en el data grid view.
-
+                Login login = new Login();
                 //Modificamos los datos necesarios del registro
                 info.Nombre = txtNombre.Text;
                 info.FechaModificacion = DateTime.Now;
-
+                //info.ModificadoPor = login.logueado;
                 departamentoRepository.Update(info); //llamamos el metodo update del departamentoRepository
                 
                 OperationResult resultupdt = departamentoRepository.Update(info);
@@ -56,8 +57,10 @@ namespace PF_PROG2.Forms
                if (resultupdt.Success)
                     {
                     MessageBox.Show("Los Datos han sido actualizados.");
-
                     FillDGvDepartamentos();
+                    txtNombre.Text = string.Empty;
+                    txtOldname.Text = string.Empty;
+
                     }
                     else
                     {
@@ -94,6 +97,11 @@ namespace PF_PROG2.Forms
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvDepartamentos_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtOldname.Text = dgvDepartamentos.CurrentRow.Cells["Nombre"].Value.ToString();
         }
     }
 }

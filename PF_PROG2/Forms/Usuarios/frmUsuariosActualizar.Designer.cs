@@ -68,6 +68,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.txtContrasena.Location = new System.Drawing.Point(448, 155);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(157, 20);
             this.txtContrasena.TabIndex = 59;
             // 

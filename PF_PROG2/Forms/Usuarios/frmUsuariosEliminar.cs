@@ -14,6 +14,7 @@ namespace PF_PROG2.Forms.Usuarios
     public partial class frmUsuariosEliminar : Form
     {
         UsuarioRepository usuariorepository = new UsuarioRepository();
+        PuestoRepository puestoRepository = new PuestoRepository();
         public frmUsuariosEliminar()
         {
             InitializeComponent();
@@ -21,19 +22,28 @@ namespace PF_PROG2.Forms.Usuarios
 
         private void FillDGvUsuarios() //Metodo privado para llenar de DGV con el metodo GetAll
         {
-            dgvUsuarios.DataSource = usuariorepository.GetAll();
+            //dgvUsuarios.DataSource = usuariorepository.GetAll();
 
-            /*//Cargar puestos en el comboBox
-            PuestoRepository puestoRepo = new PuestoRepository();
-            var listaDepa = puestoRepo.GetAll();
+            #region Acutializar_DataGridView
+            var lista = usuariorepository.GetAll();
+            var lista2 = new List<DatosUsuario>();
 
-            List<int> listaIDPuesto = new List<int>();
-            cbPuesto.Items.Clear();
-            foreach (var list in listaDepa)
+            foreach (var item in lista)
             {
-                cbPuesto.Items.Add(list.Nombre);
-                listaIDPuesto.Add(list.Id);
-            }*/
+                var datos = new DatosUsuario()
+                {
+                    Id = item.Id,
+                    Nombre = item.Nombre,
+                    Apellido = item.Apellido,
+                    Nombre_Usuario = item.NombreUsuario,
+                    Puesto = puestoRepository.FindById(item.PuestoId).Nombre
+                };
+
+                lista2.Add(datos);
+            }
+
+            dgvUsuarios.DataSource = lista2;
+            #endregion
         }
 
         private void frmUsuariosEliminar_Load(object sender, EventArgs e)
@@ -46,7 +56,7 @@ namespace PF_PROG2.Forms.Usuarios
             UsuarioRepository usuarioRepository = new UsuarioRepository();
             var usuario = usuarioRepository.FindById(Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["Id"].Value));
 
-            if (MessageBox.Show("¿Estas seguro de eliminar este Puesto?", "Eliminar Puesto", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Estas seguro de eliminar este Usuario?", "Eliminar Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 usuarioRepository.Delete(usuario);
 
@@ -54,13 +64,11 @@ namespace PF_PROG2.Forms.Usuarios
 
                 if (resultupdt.Success)
                 {
-                    MessageBox.Show("El departamento fue eliminado.");
+                    MessageBox.Show("El Usuario fue eliminado.");
                     FillDGvUsuarios();
+                    txtIdUsuario.Text = string.Empty;
                 }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error en la actualizacion, comunicarse con el Administrador de TI.");
-                }
+                
             }
         }
 
@@ -72,6 +80,16 @@ namespace PF_PROG2.Forms.Usuarios
         private void dgvUsuarios_MouseClick(object sender, MouseEventArgs e)
         {
             txtIdUsuario.Text = dgvUsuarios.CurrentRow.Cells["Nombre"].Value.ToString();
+        }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosUsuario
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
+            public string Nombre_Usuario { get; set; }
+            public string Puesto { get; set; }
         }
     }
 }

@@ -32,10 +32,10 @@ namespace PF_PROG2
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btniniciar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -58,26 +58,13 @@ namespace PF_PROG2
             this.button2.BackColor = System.Drawing.Color.DarkRed;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(226, 240);
+            this.button2.Location = new System.Drawing.Point(205, 240);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 34);
             this.button2.TabIndex = 8;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(72, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 34);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Iniciar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -109,15 +96,28 @@ namespace PF_PROG2
             this.label1.TabIndex = 5;
             this.label1.Text = "Sistema de Tickets ServiceDesk";
             // 
+            // btniniciar
+            // 
+            this.btniniciar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btniniciar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btniniciar.Location = new System.Drawing.Point(80, 240);
+            this.btniniciar.Name = "btniniciar";
+            this.btniniciar.Size = new System.Drawing.Size(92, 34);
+            this.btniniciar.TabIndex = 12;
+            this.btniniciar.Text = "Iniciar";
+            this.btniniciar.UseVisualStyleBackColor = false;
+            this.btniniciar.Click += new System.EventHandler(this.btniniciar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 380);
+            this.Controls.Add(this.btniniciar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,10 +134,10 @@ namespace PF_PROG2
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btniniciar;
     }
 }
 

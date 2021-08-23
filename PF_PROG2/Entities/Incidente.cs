@@ -17,7 +17,7 @@ namespace PF_PROG2.Entities
         public Departamento Departamento { get; set; }
         public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        public DateTime FechaCierre { get; set; }
+        public DateTime? FechaCierre { get; set; }
         public string ComentarioCierre { get; set; }
    
         public List <HistorialIncidente> historialIncidentes { get; set; }

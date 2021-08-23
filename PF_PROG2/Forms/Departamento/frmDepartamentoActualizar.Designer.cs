@@ -39,6 +39,8 @@ namespace PF_PROG2.Forms
             this.btnActualizar = new System.Windows.Forms.Button();
             this.dgvDepartamentos = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtOldname = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +49,7 @@ namespace PF_PROG2.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 49);
+            this.label1.Location = new System.Drawing.Point(191, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 25);
             this.label1.TabIndex = 0;
@@ -65,7 +67,7 @@ namespace PF_PROG2.Forms
             this.atrásToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(727, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(635, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -80,17 +82,17 @@ namespace PF_PROG2.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 120);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 24);
+            this.label2.Size = new System.Drawing.Size(244, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nuevo nombre";
+            this.label2.Text = "Nuevo nombre Departamento";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(37, 147);
+            this.txtNombre.Location = new System.Drawing.Point(37, 172);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(229, 20);
             this.txtNombre.TabIndex = 4;
@@ -100,7 +102,7 @@ namespace PF_PROG2.Forms
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(570, 190);
+            this.btnActualizar.Location = new System.Drawing.Point(493, 194);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(124, 36);
             this.btnActualizar.TabIndex = 5;
@@ -113,9 +115,10 @@ namespace PF_PROG2.Forms
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDepartamentos.Location = new System.Drawing.Point(19, 243);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
-            this.dgvDepartamentos.Size = new System.Drawing.Size(690, 175);
+            this.dgvDepartamentos.Size = new System.Drawing.Size(598, 175);
             this.dgvDepartamentos.TabIndex = 6;
             this.dgvDepartamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepartamentos_CellContentClick);
+            this.dgvDepartamentos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvDepartamentos_MouseClick);
             // 
             // label3
             // 
@@ -128,11 +131,31 @@ namespace PF_PROG2.Forms
             this.label3.Text = "Seleccione el departamento que desea actualizar:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(33, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Nombre actual";
+            // 
+            // txtOldname
+            // 
+            this.txtOldname.Location = new System.Drawing.Point(37, 115);
+            this.txtOldname.Name = "txtOldname";
+            this.txtOldname.ReadOnly = true;
+            this.txtOldname.Size = new System.Drawing.Size(229, 20);
+            this.txtOldname.TabIndex = 9;
+            // 
             // frmDepartamentoActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 436);
+            this.ClientSize = new System.Drawing.Size(635, 436);
+            this.Controls.Add(this.txtOldname);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvDepartamentos);
             this.Controls.Add(this.btnActualizar);
@@ -163,5 +186,7 @@ namespace PF_PROG2.Forms
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridView dgvDepartamentos;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtOldname;
     }
 }

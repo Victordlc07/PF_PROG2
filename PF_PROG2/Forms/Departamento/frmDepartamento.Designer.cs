@@ -40,6 +40,7 @@ namespace PF_PROG2
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.bntUpdtDgv = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -154,11 +155,23 @@ namespace PF_PROG2
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // bntUpdtDgv
+            // 
+            this.bntUpdtDgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntUpdtDgv.Location = new System.Drawing.Point(846, 27);
+            this.bntUpdtDgv.Name = "bntUpdtDgv";
+            this.bntUpdtDgv.Size = new System.Drawing.Size(51, 59);
+            this.bntUpdtDgv.TabIndex = 8;
+            this.bntUpdtDgv.Text = "⟲";
+            this.bntUpdtDgv.UseVisualStyleBackColor = true;
+            this.bntUpdtDgv.Click += new System.EventHandler(this.bntUpdtDgv_Click);
+            // 
             // frmDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 547);
+            this.Controls.Add(this.bntUpdtDgv);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCrear);
@@ -191,5 +204,6 @@ namespace PF_PROG2
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button bntUpdtDgv;
     }
 }

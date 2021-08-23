@@ -40,6 +40,7 @@ namespace PF_PROG2.Forms.Usuarios
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bntUpdtDgv = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -153,11 +154,25 @@ namespace PF_PROG2.Forms.Usuarios
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // bntUpdtDgv
+            // 
+            this.bntUpdtDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bntUpdtDgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntUpdtDgv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bntUpdtDgv.Location = new System.Drawing.Point(595, 27);
+            this.bntUpdtDgv.Name = "bntUpdtDgv";
+            this.bntUpdtDgv.Size = new System.Drawing.Size(51, 59);
+            this.bntUpdtDgv.TabIndex = 22;
+            this.bntUpdtDgv.Text = "⟲";
+            this.bntUpdtDgv.UseVisualStyleBackColor = false;
+            this.bntUpdtDgv.Click += new System.EventHandler(this.bntUpdtDgv_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 450);
+            this.Controls.Add(this.bntUpdtDgv);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCrear);
@@ -189,5 +204,6 @@ namespace PF_PROG2.Forms.Usuarios
         private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button bntUpdtDgv;
     }
 }

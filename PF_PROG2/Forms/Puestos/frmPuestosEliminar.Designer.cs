@@ -32,7 +32,7 @@ namespace PF_PROG2.Forms.Puestos
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPuestos = new System.Windows.Forms.DataGridView();
-            this.txtIdDepartamento = new System.Windows.Forms.TextBox();
+            this.txtIdPuesto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -75,13 +75,14 @@ namespace PF_PROG2.Forms.Puestos
             this.dgvPuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuestos_CellContentClick);
             this.dgvPuestos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPuestos_MouseClick);
             // 
-            // txtIdDepartamento
+            // txtIdPuesto
             // 
-            this.txtIdDepartamento.Location = new System.Drawing.Point(58, 167);
-            this.txtIdDepartamento.Name = "txtIdDepartamento";
-            this.txtIdDepartamento.Size = new System.Drawing.Size(229, 20);
-            this.txtIdDepartamento.TabIndex = 18;
-            this.txtIdDepartamento.TextChanged += new System.EventHandler(this.txtIdDepartamento_TextChanged);
+            this.txtIdPuesto.Location = new System.Drawing.Point(58, 167);
+            this.txtIdPuesto.Name = "txtIdPuesto";
+            this.txtIdPuesto.ReadOnly = true;
+            this.txtIdPuesto.Size = new System.Drawing.Size(229, 20);
+            this.txtIdPuesto.TabIndex = 18;
+            this.txtIdPuesto.TextChanged += new System.EventHandler(this.txtIdDepartamento_TextChanged);
             // 
             // label2
             // 
@@ -131,7 +132,7 @@ namespace PF_PROG2.Forms.Puestos
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvPuestos);
-            this.Controls.Add(this.txtIdDepartamento);
+            this.Controls.Add(this.txtIdPuesto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -151,7 +152,7 @@ namespace PF_PROG2.Forms.Puestos
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvPuestos;
-        private System.Windows.Forms.TextBox txtIdDepartamento;
+        private System.Windows.Forms.TextBox txtIdPuesto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;

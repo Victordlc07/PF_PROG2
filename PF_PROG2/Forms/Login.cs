@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,27 +32,54 @@ namespace PF_PROG2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            Usuario usuario = new Usuario();
-
-            if (txtUsuario.Text == usuario.NombreUsuario && txtPassword.Text == usuario.Contrasena)
-            {
-                MessageBox.Show("Acceso concedido");
-
-            }
-           else
-            {
-                MessageBox.Show("Usuario o contraseña inválido, favor internet de nuevo");
-                txtUsuario.Text = "";
-                txtPassword.Text = "";
-            }
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        
+       
+
+        private void btniniciar_Click(object sender, EventArgs e)
+        {
+          string connString = ConfigurationManager.ConnectionStrings["MsSQl"].ConnectionString;
+            {
+               using (SqlConnection conn = new SqlConnection(connString))
+               {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                            cmd.Connection = conn;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.CommandText = "Sp_Login";
+                            cmd.Parameters.AddWithValue("@NombreUsuario", txtUsuario.Text);
+                            cmd.Parameters.AddWithValue("@Contrasena", txtPassword.Text);
+
+                            cmd.ExecuteNonQuery();
+                            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            
+                            if (dt.Rows.Count > 0)
+                            {
+                            MessageBox.Show("Acceso concedido");
+                            logueado = txtUsuario.Text;
+                            Menu_Principal frmprin = new Menu_Principal();
+                            frmprin.ShowDialog();
+                            txtUsuario.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            }
+                            else
+                            {
+                            MessageBox.Show("Usuario o Contraseña incorrecta, favor intentar nuevamente", "Autenticación Fallida");
+                            txtUsuario.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            }
+                    }
+               }
+            }
+        }
+
+        public string logueado;
     }
 }

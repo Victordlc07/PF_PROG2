@@ -22,7 +22,25 @@ namespace PF_PROG2
 
         private void FillDGvDepartamentos()
         {
-            dgvDepartamentos.DataSource = departamentoRepository.GetAll();
+            //dgvDepartamentos.DataSource = departamentoRepository.GetAll().Select(x => new {x.Id, x.Nombre, x.FechaRegistro}).ToList();
+
+            #region Acutializar_DataGridView
+            var lista = departamentoRepository.GetAll();
+            var lista2 = new List<DatosDepartamento>();
+
+            foreach (var item in lista)
+            {
+                var datos = new DatosDepartamento()
+                {
+                    Id = item.Id,
+                    Nombre = item.Nombre
+                };
+
+                lista2.Add(datos);
+            }
+
+            dgvDepartamentos.DataSource = lista2;
+            #endregion
         }
 
         private void frmDepartamento_Load(object sender, EventArgs e)
@@ -79,6 +97,18 @@ namespace PF_PROG2
         {
             frmDepartamentoEliminar frmEliminar = new frmDepartamentoEliminar();
             frmEliminar.ShowDialog();
+        }
+
+        private void bntUpdtDgv_Click(object sender, EventArgs e) //Boton Actualizar Dgv
+        {
+            FillDGvDepartamentos();
+        }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosDepartamento
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
         }
     }
 }

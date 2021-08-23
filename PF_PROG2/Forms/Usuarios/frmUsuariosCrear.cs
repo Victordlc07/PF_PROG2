@@ -15,6 +15,7 @@ namespace PF_PROG2.Forms.Usuarios
     public partial class frmUsuariosCrear : Form
     {
         UsuarioRepository usuariorepository = new UsuarioRepository();
+        PuestoRepository puestoRepository = new PuestoRepository();
         public frmUsuariosCrear()
         {
             InitializeComponent();
@@ -22,8 +23,35 @@ namespace PF_PROG2.Forms.Usuarios
 
         private void FillDGvUsuarios() //Metodo privado para llenar de DGV con el metodo GetAll
         {
-            dgvUsuarios.DataSource = usuariorepository.GetAll();
+            //dgvUsuarios.DataSource = usuariorepository.GetAll();
 
+            #region Acutializar_DataGridView
+            var lista = usuariorepository.GetAll();
+            var lista2 = new List<DatosUsuario>();
+
+            foreach (var item in lista)
+            {
+                var datos = new DatosUsuario()
+                {
+                    Id = item.Id,
+                    Nombre = item.Nombre,
+                    Apellido = item.Apellido,
+                    Nombre_Usuario = item.NombreUsuario,
+                    Puesto = puestoRepository.FindById(item.PuestoId).Nombre,
+                    Cedula = item.Cedula,
+                    Correo = item.Correo,
+                    Telefono = item.Telefono,
+                    FechaNacimiento = (DateTime)item.FechaNacimiento,
+                    Contrasena = item.Contrasena
+                };
+
+                lista2.Add(datos);
+            }
+
+            dgvUsuarios.DataSource = lista2;
+            #endregion
+
+            #region ComboBox Puestos
             //Cargar puestos en el comboBox
             PuestoRepository puestoRepo = new PuestoRepository();
             var listaDepa = puestoRepo.GetAll();
@@ -35,6 +63,7 @@ namespace PF_PROG2.Forms.Usuarios
                 cbPuesto.Items.Add(list.Nombre);
                 listaIDPuesto.Add(list.Id);
             }
+            #endregion
         }
 
         private void frmUsuariosCrear_Load(object sender, EventArgs e)
@@ -83,7 +112,7 @@ namespace PF_PROG2.Forms.Usuarios
 
                 if (user.Nombre != "") //Condicional para crear la entrada y de pueda actualizar el DGV y limpiar los campos.
                 {
-                    MessageBox.Show("Los Datos han sido actualizados.");
+                    MessageBox.Show("El usuario ha sido creado.");
                     FillDGvUsuarios();
                     txtNombre.Text = string.Empty;
                     txtApellido.Text = string.Empty;
@@ -115,6 +144,21 @@ namespace PF_PROG2.Forms.Usuarios
             txtNombreUsuario.Text = string.Empty;
             txtTelefono.Text = string.Empty;
             cbPuesto.Text = string.Empty;
+        }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosUsuario
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
+            public string Nombre_Usuario { get; set; }
+            public string Puesto { get; set; }
+            public string Cedula { get; set; }
+            public string Correo { get; set; }
+            public DateTime FechaNacimiento { get; set; }
+            public string Telefono { get; set; }
+            public string Contrasena { get; set; }
         }
 
         private void txtContrasena_TextChanged(object sender, EventArgs e)

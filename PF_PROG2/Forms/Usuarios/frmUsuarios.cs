@@ -15,6 +15,7 @@ namespace PF_PROG2.Forms.Usuarios
     public partial class frmUsuarios : Form
     {
         UsuarioRepository usuariorepository = new UsuarioRepository();
+        PuestoRepository puestoRepository = new PuestoRepository();
         public frmUsuarios()
         {
             InitializeComponent();
@@ -22,7 +23,29 @@ namespace PF_PROG2.Forms.Usuarios
 
         private void FillDGvUsuarios() //Metodo privado para llenar de DGV con el metodo GetAll
         {
-            dgvUsuarios.DataSource = usuariorepository.GetAll();
+            // dgvUsuarios.DataSource = usuariorepository.GetAll();
+
+            #region Acutializar_DataGridView
+            var lista = usuariorepository.GetAll();
+            var lista2 = new List<DatosUsuario>();
+
+            foreach (var item in lista)
+            {
+                var datos = new DatosUsuario()
+                {
+                    Id = item.Id,
+                    Nombre = item.Nombre,
+                    Apellido = item.Apellido,
+                    Nombre_Usuario = item.NombreUsuario,
+                    Puesto = puestoRepository.FindById(item.PuestoId).Nombre
+                };
+
+                lista2.Add(datos);
+            }
+
+            dgvUsuarios.DataSource = lista2;
+            #endregion
+
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
@@ -69,6 +92,21 @@ namespace PF_PROG2.Forms.Usuarios
         {
             frmUsuariosEliminar usuariodel = new frmUsuariosEliminar();
             usuariodel.ShowDialog();
+        }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosUsuario
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
+            public string Nombre_Usuario { get; set; }
+            public string Puesto { get; set; }
+        }
+
+        private void bntUpdtDgv_Click(object sender, EventArgs e)
+        {
+            FillDGvUsuarios();
         }
     }
 }

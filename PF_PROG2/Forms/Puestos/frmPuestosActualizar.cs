@@ -14,6 +14,7 @@ namespace PF_PROG2.Forms.Puestos
     public partial class frmPuestosActualizar : Form
     {
         PuestoRepository puestoRepository = new PuestoRepository();
+        DepartamentoRepository departamentoRepository = new DepartamentoRepository();
         public frmPuestosActualizar()
         {
             InitializeComponent();
@@ -21,10 +22,27 @@ namespace PF_PROG2.Forms.Puestos
 
         private void FillDGvPuestos() //Metodo para llenar el DGV con el metodo GetAll
         {
-            dgvPuestos.DataSource = puestoRepository.GetAll().Select(x => new { x.Id, x.Nombre, x.DepartamentoId }).ToList();
+
+            #region Acutializar_DataGridView
+            var lista = puestoRepository.GetAll();
+            var lista2 = new List<DatosPuesto>();
+
+            foreach (var item in lista)
+            {
+                var datos = new DatosPuesto()
+                {
+                    Id = item.Id,
+                    Puesto = item.Nombre,
+                    Departamento = departamentoRepository.FindById(item.DepartamentoId).Nombre
+                };
+
+                lista2.Add(datos);
+            }
+            dgvPuestos.DataSource = lista2;
+            #endregion
         }
 
-            private void frmPuestosActualizar_Load(object sender, EventArgs e)
+        private void frmPuestosActualizar_Load(object sender, EventArgs e)
         {
             FillDGvPuestos();
         }
@@ -53,9 +71,11 @@ namespace PF_PROG2.Forms.Puestos
 
                 if (resultupdt.Success)
                 {
-                    MessageBox.Show("Los Datos han sido actualizados.");
+                    MessageBox.Show("Los Datos de puesto han sido actualizados.");
 
                     FillDGvPuestos();
+                    txtNombre.Text = string.Empty;
+                    txtOldname.Text = string.Empty;
                 }
                 else
                 {
@@ -98,5 +118,19 @@ namespace PF_PROG2.Forms.Puestos
         {
 
         }
+
+        private void dgvPuestos_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtOldname.Text = dgvPuestos.CurrentRow.Cells["Puesto"].Value.ToString();
+        }
+
+        //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
+        private class DatosPuesto
+        {
+            public int Id { get; set; }
+            public string Puesto { get; set; }
+            public string Departamento { get; set; }
+        }
+
     }
 }

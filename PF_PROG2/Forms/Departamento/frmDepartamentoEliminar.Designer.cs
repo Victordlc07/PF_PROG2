@@ -66,6 +66,7 @@ namespace PF_PROG2
             // 
             this.txtIdDepartamento.Location = new System.Drawing.Point(58, 149);
             this.txtIdDepartamento.Name = "txtIdDepartamento";
+            this.txtIdDepartamento.ReadOnly = true;
             this.txtIdDepartamento.Size = new System.Drawing.Size(229, 20);
             this.txtIdDepartamento.TabIndex = 10;
             this.txtIdDepartamento.TextChanged += new System.EventHandler(this.txtIdDepartamento_TextChanged);

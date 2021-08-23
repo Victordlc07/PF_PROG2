@@ -41,6 +41,8 @@ namespace PF_PROG2
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salirXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dGvincidentes = new System.Windows.Forms.DataGridView();
+            this.historialIncidentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bntUpdtDgv = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGvincidentes)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +53,7 @@ namespace PF_PROG2
             this.label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(141, 106);
+            this.label1.Location = new System.Drawing.Point(139, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(538, 26);
             this.label1.TabIndex = 0;
@@ -99,18 +101,21 @@ namespace PF_PROG2
             this.sLAToolStripMenuItem.Name = "sLAToolStripMenuItem";
             this.sLAToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.sLAToolStripMenuItem.Text = "Prioridad";
+            this.sLAToolStripMenuItem.Click += new System.EventHandler(this.sLAToolStripMenuItem_Click);
             // 
             // sLAToolStripMenuItem1
             // 
             this.sLAToolStripMenuItem1.Name = "sLAToolStripMenuItem1";
             this.sLAToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.sLAToolStripMenuItem1.Text = "SLA";
+            this.sLAToolStripMenuItem1.Click += new System.EventHandler(this.sLAToolStripMenuItem1_Click);
             // 
             // incidenteToolStripMenuItem
             // 
             this.incidenteToolStripMenuItem.Name = "incidenteToolStripMenuItem";
             this.incidenteToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.incidenteToolStripMenuItem.Text = "Incidentes";
+            this.incidenteToolStripMenuItem.Click += new System.EventHandler(this.incidenteToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -119,13 +124,14 @@ namespace PF_PROG2
             this.usuariosToolStripMenuItem,
             this.puestosToolStripMenuItem,
             this.usuariosToolStripMenuItem1,
-            this.sLAToolStripMenuItem,
             this.sLAToolStripMenuItem1,
+            this.sLAToolStripMenuItem,
             this.incidenteToolStripMenuItem,
+            this.historialIncidentesToolStripMenuItem,
             this.salirXToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(834, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(814, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -142,23 +148,43 @@ namespace PF_PROG2
             this.dGvincidentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGvincidentes.Location = new System.Drawing.Point(21, 256);
             this.dGvincidentes.Name = "dGvincidentes";
-            this.dGvincidentes.Size = new System.Drawing.Size(801, 241);
+            this.dGvincidentes.Size = new System.Drawing.Size(775, 241);
             this.dGvincidentes.TabIndex = 3;
             this.dGvincidentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGvincidentes_CellContentClick);
+            // 
+            // historialIncidentesToolStripMenuItem
+            // 
+            this.historialIncidentesToolStripMenuItem.Name = "historialIncidentesToolStripMenuItem";
+            this.historialIncidentesToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.historialIncidentesToolStripMenuItem.Text = "Historial Incidentes";
+            this.historialIncidentesToolStripMenuItem.Click += new System.EventHandler(this.historialIncidentesToolStripMenuItem_Click);
+            // 
+            // bntUpdtDgv
+            // 
+            this.bntUpdtDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bntUpdtDgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntUpdtDgv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bntUpdtDgv.Location = new System.Drawing.Point(751, 27);
+            this.bntUpdtDgv.Name = "bntUpdtDgv";
+            this.bntUpdtDgv.Size = new System.Drawing.Size(51, 59);
+            this.bntUpdtDgv.TabIndex = 9;
+            this.bntUpdtDgv.Text = "⟲";
+            this.bntUpdtDgv.UseVisualStyleBackColor = false;
+            this.bntUpdtDgv.Click += new System.EventHandler(this.bntUpdtDgv_Click);
             // 
             // Menu_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(834, 520);
+            this.ClientSize = new System.Drawing.Size(814, 520);
+            this.Controls.Add(this.bntUpdtDgv);
             this.Controls.Add(this.dGvincidentes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_Principal";
-            this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -182,5 +208,7 @@ namespace PF_PROG2
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.DataGridView dGvincidentes;
         private System.Windows.Forms.ToolStripMenuItem salirXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialIncidentesToolStripMenuItem;
+        private System.Windows.Forms.Button bntUpdtDgv;
     }
 }

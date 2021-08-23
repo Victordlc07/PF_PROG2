@@ -37,7 +37,11 @@ namespace PF_PROG2
 
                 _departamentoRepo.Create(depa); //Enviamos el modelo al metodo crear del departamentoRepository
 
-                MessageBox.Show("El departamento Fue Agregado", "Departamento");
+                if (depa.Nombre != "")
+                {
+                    MessageBox.Show("El departamento Fue Agregado", "Departamento");
+                    txtNombreDtp.Clear();
+                }
             }
         }
 
