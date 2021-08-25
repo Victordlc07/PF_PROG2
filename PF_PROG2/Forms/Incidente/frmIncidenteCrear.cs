@@ -89,11 +89,20 @@ namespace PF_PROG2
                 cbDepartamentos.Items.Add(list.Nombre);
             }
             #endregion
+            #region ComboBox CreadoPor
+            ////Llenar comboBox con los 
+            //var listaCre = usuarioRepository.GetAll();
+            //cbCreadoPor.Items.Clear();
+            //foreach (var list in listaCre)
+            //{
+            //    cbCreadoPor.Items.Add(list.Nombre);
+            //}
+            #endregion
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtTitulo.Text) || string.IsNullOrWhiteSpace(cbUsuariosaf.Text) || string.IsNullOrWhiteSpace(cbUsuarioasig.Text) || string.IsNullOrWhiteSpace(cbPrioridades.Text) || string.IsNullOrWhiteSpace(cbDepartamentos.Text) || string.IsNullOrWhiteSpace(txtDescripcion.Text))
+            if (string.IsNullOrWhiteSpace(txtTitulo.Text) || string.IsNullOrWhiteSpace(cbUsuariosaf.Text) || string.IsNullOrWhiteSpace(cbUsuarioasig.Text) || string.IsNullOrWhiteSpace(cbPrioridades.Text) || string.IsNullOrWhiteSpace(cbDepartamentos.Text) || string.IsNullOrWhiteSpace(txtDescripcion.Text) )
             {
                 MessageBox.Show("Debes llenar los campos vacíos", "Campo vacio");
             }
@@ -138,11 +147,12 @@ namespace PF_PROG2
                 inc.UsuarioAsignadoId = listaIDUser[cbUsuarioasig.SelectedIndex];
                 inc.PrioridadId = listaIDPrio[cbPrioridades.SelectedIndex];
                 inc.DepartamentoId = listaIDDep[cbDepartamentos.SelectedIndex];
+                //inc.CreadoPor = listaIDUser[cbCreadoPor.SelectedIndex];
                 inc.ComentarioCierre = "";
+                
                 incidenteRepo.Create(inc);
 
-                //Tratar de vincular la clase Incidente con OperationResult
-                // OperationResult resultupdt = incidenteRepository.Create(prio);
+             
                 if (inc.Titulo != "")
                 {
                     MessageBox.Show("El incidente ha sido creado.");
@@ -153,6 +163,7 @@ namespace PF_PROG2
                     cbUsuarioasig.Text = string.Empty;
                     cbPrioridades.Text = string.Empty;
                     cbDepartamentos.Text = string.Empty;
+                    
 
                 }
   
@@ -164,45 +175,8 @@ namespace PF_PROG2
             this.Close();
         }
 
-        private void dgvIncidente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombreDpt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+   
+           
 
 
         private class DatosIncidente
@@ -217,5 +191,20 @@ namespace PF_PROG2
             public DateTime FechaRegisto { get; set; }
         }
 
+        private void cbUsuarioasig_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtTitulo.Text = "";
+            txtDescripcion.Text ="";
+            cbUsuariosaf.Text = "";
+            cbUsuarioasig.Text ="";
+            cbPrioridades.Text ="";
+            cbDepartamentos.Text = "";
+
+        }
     }
 }

@@ -92,7 +92,7 @@ namespace PF_PROG2.Forms.Puestos
 
                 if (pues.Nombre != "")
                 {
-                    MessageBox.Show("El departamento ha sido creado");
+                    MessageBox.Show("El puesto ha sido creado");
                     FillDGvPuestos();
                     txtNombreDpt.Text = string.Empty;
                     cbDepartamentos.Text = string.Empty;
@@ -118,7 +118,8 @@ namespace PF_PROG2.Forms.Puestos
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            txtNombreDpt.Text = "";
+            cbDepartamentos.Text = "";
         }
 
         private void txtNombreDpt_TextChanged(object sender, EventArgs e)

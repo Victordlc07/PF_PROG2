@@ -63,7 +63,7 @@ namespace PF_PROG2.Forms.Puestos
 
                 if (resultupdt.Success)
                 {
-                    MessageBox.Show("El departamento fue eliminado.");
+                    MessageBox.Show("El puesto fue eliminado.");
                     FillDGvPuestos();
                     txtIdPuesto.Text = string.Empty;
                 }

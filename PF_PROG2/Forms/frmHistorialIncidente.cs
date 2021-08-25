@@ -38,6 +38,11 @@ namespace PF_PROG2.Forms
                     Titulo = incidenteRepository.FindById(item.IncidenteId).Titulo,
                     Descripcion = incidenteRepository.FindById(item.IncidenteId).Descripcion,
                     Comentario = item.Comentario,
+                    Fecha_Cierre = DateTime.Now,
+                    Estatus = item.Estatus
+
+
+                    
                     //Fecha_Cierre = (DateTime)incidenteRepository.FindById(item.IncidenteId).FechaCierre,
                 };
 
@@ -54,8 +59,9 @@ namespace PF_PROG2.Forms
             public int Id { get; set; }
             public string Titulo { get; set; }
             public string Comentario { get; set; }
-            //public DateTime Fecha_Cierre { get; set; }
+            public DateTime Fecha_Cierre { get; set; }
             public string Descripcion { get; set; }
+            public string Estatus { get; set; }
 
         }
 

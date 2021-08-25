@@ -33,7 +33,14 @@ namespace PF_PROG2
                 var datos = new DatosDepartamento()
                 {
                     Id = item.Id,
-                    Nombre = item.Nombre
+                    Nombre = item.Nombre,
+                    FechaActual = (DateTime)item.FechaRegistro,
+                   Estado = item.Estatus,
+                    
+
+                   
+
+
                 };
 
                 lista2.Add(datos);
@@ -109,6 +116,14 @@ namespace PF_PROG2
         {
             public int Id { get; set; }
             public string Nombre { get; set; }
+            public DateTime FechaActual { get; set; }
+            public string Estado { get; set; }
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

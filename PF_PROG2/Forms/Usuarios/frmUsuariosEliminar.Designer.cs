@@ -43,7 +43,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Crimson;
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Location = new System.Drawing.Point(484, 383);
@@ -58,7 +58,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 182);
+            this.label3.Location = new System.Drawing.Point(33, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(296, 20);
             this.label3.TabIndex = 27;
@@ -66,6 +66,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(23, 206);
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -75,7 +76,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // txtIdUsuario
             // 
-            this.txtIdUsuario.Location = new System.Drawing.Point(51, 150);
+            this.txtIdUsuario.Location = new System.Drawing.Point(23, 150);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.ReadOnly = true;
             this.txtIdUsuario.Size = new System.Drawing.Size(229, 20);
@@ -84,10 +85,10 @@ namespace PF_PROG2.Forms.Usuarios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 123);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 24);
+            this.label2.Size = new System.Drawing.Size(125, 24);
             this.label2.TabIndex = 24;
             this.label2.Text = "Id del Usuario";
             // 
@@ -113,8 +114,10 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -122,6 +125,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(625, 450);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label3);
@@ -131,7 +135,7 @@ namespace PF_PROG2.Forms.Usuarios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmUsuariosEliminar";
-            this.Text = "frmUsuariosEliminar";
+            this.Text = "Eliminar Usuarios";
             this.Load += new System.EventHandler(this.frmUsuariosEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.menuStrip1.ResumeLayout(false);

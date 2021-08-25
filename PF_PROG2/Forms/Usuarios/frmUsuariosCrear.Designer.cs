@@ -59,11 +59,12 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(376, 260);
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCrear.Location = new System.Drawing.Point(376, 274);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(135, 47);
+            this.btnCrear.Size = new System.Drawing.Size(135, 33);
             this.btnCrear.TabIndex = 21;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -73,6 +74,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(40, 328);
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -85,7 +87,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 261);
+            this.label3.Location = new System.Drawing.Point(296, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 19;
@@ -94,11 +96,12 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(517, 261);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(517, 274);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 34);
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -137,7 +140,7 @@ namespace PF_PROG2.Forms.Usuarios
             // cbPuesto
             // 
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Location = new System.Drawing.Point(119, 260);
+            this.cbPuesto.Location = new System.Drawing.Point(463, 201);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(157, 21);
             this.cbPuesto.TabIndex = 14;
@@ -156,8 +159,10 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -299,6 +304,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(685, 509);
             this.Controls.Add(this.txtFechaNacimiento);
             this.Controls.Add(this.txtContrasena);

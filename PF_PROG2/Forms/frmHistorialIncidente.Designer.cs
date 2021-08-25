@@ -47,6 +47,7 @@ namespace PF_PROG2.Forms
             // 
             // dGVHincidente
             // 
+            this.dGVHincidente.BackgroundColor = System.Drawing.Color.Ivory;
             this.dGVHincidente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVHincidente.Location = new System.Drawing.Point(60, 68);
             this.dGVHincidente.Name = "dGVHincidente";
@@ -55,7 +56,7 @@ namespace PF_PROG2.Forms
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Teal;
+            this.btnCerrar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCerrar.Location = new System.Drawing.Point(568, 367);
@@ -70,6 +71,7 @@ namespace PF_PROG2.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dGVHincidente);

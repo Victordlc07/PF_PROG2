@@ -102,5 +102,10 @@ namespace PF_PROG2.Forms.Puestos
         {
             FillDGvDepartamentos();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

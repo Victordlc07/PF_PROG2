@@ -76,8 +76,10 @@ namespace PF_PROG2.Forms
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -94,7 +96,7 @@ namespace PF_PROG2.Forms
             // 
             // txtcanthrs
             // 
-            this.txtcanthrs.Location = new System.Drawing.Point(37, 121);
+            this.txtcanthrs.Location = new System.Drawing.Point(19, 121);
             this.txtcanthrs.Name = "txtcanthrs";
             this.txtcanthrs.Size = new System.Drawing.Size(229, 20);
             this.txtcanthrs.TabIndex = 4;
@@ -102,8 +104,9 @@ namespace PF_PROG2.Forms
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnActualizar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.Location = new System.Drawing.Point(417, 194);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(124, 36);
@@ -114,6 +117,7 @@ namespace PF_PROG2.Forms
             // 
             // dgvSLA
             // 
+            this.dgvSLA.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvSLA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSLA.Location = new System.Drawing.Point(19, 243);
             this.dgvSLA.Name = "dgvSLA";
@@ -126,7 +130,7 @@ namespace PF_PROG2.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 210);
+            this.label3.Location = new System.Drawing.Point(17, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(362, 20);
             this.label3.TabIndex = 7;
@@ -145,7 +149,7 @@ namespace PF_PROG2.Forms
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(37, 176);
+            this.txtdescripcion.Location = new System.Drawing.Point(19, 176);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(229, 20);
             this.txtdescripcion.TabIndex = 9;
@@ -173,6 +177,7 @@ namespace PF_PROG2.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(562, 436);
             this.Controls.Add(this.txtOldname);
             this.Controls.Add(this.label5);
@@ -187,7 +192,7 @@ namespace PF_PROG2.Forms
             this.Controls.Add(this.label1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmSLAActualizar";
-            this.Text = "frmSLAActualizar";
+            this.Text = "Actualizar SLA";
             this.Load += new System.EventHandler(this.frmSLAActualizar_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

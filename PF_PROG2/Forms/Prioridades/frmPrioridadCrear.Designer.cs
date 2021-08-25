@@ -54,8 +54,9 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.Location = new System.Drawing.Point(179, 194);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(135, 47);
@@ -109,6 +110,7 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             this.dgvPrioridades.AllowUserToAddRows = false;
             this.dgvPrioridades.AllowUserToDeleteRows = false;
+            this.dgvPrioridades.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPrioridades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrioridades.Location = new System.Drawing.Point(28, 260);
             this.dgvPrioridades.Name = "dgvPrioridades";
@@ -119,8 +121,9 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCrear.Location = new System.Drawing.Point(38, 194);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(135, 47);
@@ -142,8 +145,10 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -151,6 +156,7 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(566, 432);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.dgvPrioridades);
@@ -163,7 +169,7 @@ namespace PF_PROG2.Forms.Prioridades
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrioridadesCrear";
-            this.Text = "frmPrioridadesCrear";
+            this.Text = "Crear Prioridad";
             this.Load += new System.EventHandler(this.frmPrioridadesCrear_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrioridades)).EndInit();
             this.menuStrip1.ResumeLayout(false);

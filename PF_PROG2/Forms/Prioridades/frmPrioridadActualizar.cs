@@ -35,7 +35,9 @@ namespace PF_PROG2.Forms.Prioridades
                     Id = item.Id,
                     Prioridad = item.Nombre,
                     SLA = slaRepository.FindById(item.SlaId).Descripcion,
-                    SLA_Hrs = slaRepository.FindById(item.SlaId).CantidadHoras
+                    SLA_Hrs = slaRepository.FindById(item.SlaId).CantidadHoras,
+                    Estado = item.Estatus
+
                 };
 
                 lista2.Add(datos);
@@ -76,6 +78,7 @@ namespace PF_PROG2.Forms.Prioridades
                     FillDGvPrioridades();
                     txtNombre.Text = string.Empty;
                     txtOldname.Text = string.Empty;
+
                 }
                 else
                 {
@@ -131,6 +134,7 @@ namespace PF_PROG2.Forms.Prioridades
             public string Prioridad { get; set; }
             public string SLA { get; set; }
             public int SLA_Hrs { get; set; }
+            public string Estado { get; set; }
         }
     }
 }

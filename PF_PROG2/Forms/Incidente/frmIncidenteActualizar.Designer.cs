@@ -50,21 +50,21 @@ namespace PF_PROG2
             this.label3.Size = new System.Drawing.Size(326, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Seleccione el incidente que desea actualizar:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dgvIncidentes
             // 
+            this.dgvIncidentes.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvIncidentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidentes.Location = new System.Drawing.Point(25, 267);
             this.dgvIncidentes.Name = "dgvIncidentes";
             this.dgvIncidentes.Size = new System.Drawing.Size(630, 157);
             this.dgvIncidentes.TabIndex = 13;
-            this.dgvIncidentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncidente_CellContentClick);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnActualizar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.Location = new System.Drawing.Point(531, 225);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(124, 36);
@@ -76,13 +76,12 @@ namespace PF_PROG2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(33, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 20);
+            this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nuevo comentario";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // menuStrip1
             // 
@@ -93,12 +92,13 @@ namespace PF_PROG2
             this.menuStrip1.Size = new System.Drawing.Size(684, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -111,13 +111,13 @@ namespace PF_PROG2
             this.label1.Size = new System.Drawing.Size(197, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Actualizar Estado";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtComentario
             // 
-            this.txtComentario.Location = new System.Drawing.Point(37, 132);
+            this.txtComentario.BackColor = System.Drawing.SystemColors.Control;
+            this.txtComentario.Location = new System.Drawing.Point(25, 132);
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(488, 96);
+            this.txtComentario.Size = new System.Drawing.Size(374, 95);
             this.txtComentario.TabIndex = 15;
             this.txtComentario.Text = "";
             // 
@@ -125,6 +125,7 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(684, 450);
             this.Controls.Add(this.txtComentario);
             this.Controls.Add(this.label3);
@@ -134,7 +135,7 @@ namespace PF_PROG2
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Name = "frmIncidenteActualizar";
-            this.Text = "frmIncidenteActualizar";
+            this.Text = "Actualizar incidentes";
             this.Load += new System.EventHandler(this.frmIncidenteActualizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncidentes)).EndInit();
             this.menuStrip1.ResumeLayout(false);

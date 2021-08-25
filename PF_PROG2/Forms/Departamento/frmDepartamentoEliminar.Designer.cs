@@ -45,7 +45,7 @@ namespace PF_PROG2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 181);
+            this.label3.Location = new System.Drawing.Point(31, 181);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(344, 20);
             this.label3.TabIndex = 13;
@@ -54,6 +54,7 @@ namespace PF_PROG2
             // 
             // dgvDepartamentos
             // 
+            this.dgvDepartamentos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDepartamentos.Location = new System.Drawing.Point(35, 204);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
@@ -64,7 +65,7 @@ namespace PF_PROG2
             // 
             // txtIdDepartamento
             // 
-            this.txtIdDepartamento.Location = new System.Drawing.Point(58, 149);
+            this.txtIdDepartamento.Location = new System.Drawing.Point(35, 149);
             this.txtIdDepartamento.Name = "txtIdDepartamento";
             this.txtIdDepartamento.ReadOnly = true;
             this.txtIdDepartamento.Size = new System.Drawing.Size(229, 20);
@@ -74,10 +75,10 @@ namespace PF_PROG2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 122);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 24);
+            this.label2.Size = new System.Drawing.Size(179, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "Id del Departamento";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -106,15 +107,17 @@ namespace PF_PROG2
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Crimson;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Location = new System.Drawing.Point(491, 382);
             this.btnEliminar.Name = "btnEliminar";
@@ -128,6 +131,7 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(647, 450);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label3);

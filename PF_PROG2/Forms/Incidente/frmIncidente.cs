@@ -113,5 +113,10 @@ namespace PF_PROG2
         {
             FillDGvDepartamentos();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

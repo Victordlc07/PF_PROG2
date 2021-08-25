@@ -18,11 +18,12 @@ namespace PF_PROG2
 
         
     {
-        //GenericRepository _dbcontext = new GenericRepository();
-       
-        public Login()
+        UsuarioRepository usurepo = new UsuarioRepository();
+
+        Usuario usuario = new Usuario();
+            public Login()
         {
-           // _dbcontext.Create(new t)
+           
 
             InitializeComponent();
         }
@@ -42,9 +43,11 @@ namespace PF_PROG2
 
         private void btniniciar_Click(object sender, EventArgs e)
         {
-          string connString = ConfigurationManager.ConnectionStrings["MsSQl"].ConnectionString;
+            UsuarioRepository usurepo = new UsuarioRepository();
+            string connString = ConfigurationManager.ConnectionStrings["MsSQl"].ConnectionString;
+   
             {
-               using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = new SqlConnection(connString))
                {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand())
@@ -59,15 +62,18 @@ namespace PF_PROG2
                             SqlDataAdapter da = new SqlDataAdapter(cmd);
                             DataTable dt = new DataTable();
                             da.Fill(dt);
-                            
-                            if (dt.Rows.Count > 0)
+                       
+                        if (dt.Rows.Count > 0)
                             {
+                          
                             MessageBox.Show("Acceso concedido");
-                            logueado = txtUsuario.Text;
                             Menu_Principal frmprin = new Menu_Principal();
                             frmprin.ShowDialog();
+                          
+                            
                             txtUsuario.Text = string.Empty;
                             txtPassword.Text = string.Empty;
+                            
                             }
                             else
                             {
@@ -75,11 +81,14 @@ namespace PF_PROG2
                             txtUsuario.Text = string.Empty;
                             txtPassword.Text = string.Empty;
                             }
+                       
+
+
                     }
-               }
+                 }
             }
         }
 
-        public string logueado;
+     static public int logueado;
     }
 }

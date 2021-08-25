@@ -49,7 +49,7 @@ namespace PF_PROG2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(282, 77);
+            this.label1.Location = new System.Drawing.Point(290, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 29);
             this.label1.TabIndex = 0;
@@ -58,10 +58,10 @@ namespace PF_PROG2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 195);
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 24);
+            this.label2.Size = new System.Drawing.Size(123, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "SLA Activos";
             // 
@@ -69,17 +69,19 @@ namespace PF_PROG2
             // 
             this.dgvSLA.AllowUserToAddRows = false;
             this.dgvSLA.AllowUserToDeleteRows = false;
+            this.dgvSLA.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvSLA.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSLA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSLA.Location = new System.Drawing.Point(27, 236);
+            this.dgvSLA.Location = new System.Drawing.Point(12, 178);
             this.dgvSLA.Name = "dgvSLA";
             this.dgvSLA.ReadOnly = true;
-            this.dgvSLA.Size = new System.Drawing.Size(596, 220);
+            this.dgvSLA.Size = new System.Drawing.Size(373, 241);
             this.dgvSLA.TabIndex = 3;
             this.dgvSLA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSLA_CellContentClick);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem,
             this.actualizarToolStripMenuItem,
@@ -93,37 +95,40 @@ namespace PF_PROG2
             // 
             // crearToolStripMenuItem
             // 
+            this.crearToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
             this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            this.crearToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.crearToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.crearToolStripMenuItem.Text = "Crear";
             this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
             // 
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
+            this.eliminarToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(245, 188);
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCrear.Location = new System.Drawing.Point(454, 210);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(122, 33);
             this.btnCrear.TabIndex = 5;
@@ -133,9 +138,10 @@ namespace PF_PROG2
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnActualizar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(373, 188);
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnActualizar.Location = new System.Drawing.Point(454, 276);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(122, 33);
             this.btnActualizar.TabIndex = 6;
@@ -145,10 +151,10 @@ namespace PF_PROG2
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.Location = new System.Drawing.Point(501, 188);
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEliminar.Location = new System.Drawing.Point(454, 342);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(122, 33);
             this.btnEliminar.TabIndex = 7;
@@ -161,7 +167,7 @@ namespace PF_PROG2
             this.bntUpdtDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bntUpdtDgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntUpdtDgv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bntUpdtDgv.Location = new System.Drawing.Point(588, 27);
+            this.bntUpdtDgv.Location = new System.Drawing.Point(588, 381);
             this.bntUpdtDgv.Name = "bntUpdtDgv";
             this.bntUpdtDgv.Size = new System.Drawing.Size(51, 59);
             this.bntUpdtDgv.TabIndex = 16;
@@ -173,7 +179,8 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 481);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(651, 441);
             this.Controls.Add(this.bntUpdtDgv);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -184,7 +191,7 @@ namespace PF_PROG2
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmSLA";
-            this.Text = "frmSLA";
+            this.Text = "SLA";
             this.Load += new System.EventHandler(this.frmSLA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSLA)).EndInit();
             this.menuStrip1.ResumeLayout(false);

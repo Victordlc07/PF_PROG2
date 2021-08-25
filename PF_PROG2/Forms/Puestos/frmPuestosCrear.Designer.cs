@@ -54,11 +54,12 @@ namespace PF_PROG2.Forms.Puestos
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(179, 194);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(179, 202);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 39);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -75,10 +76,10 @@ namespace PF_PROG2.Forms.Puestos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 24);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Puesto";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -97,10 +98,10 @@ namespace PF_PROG2.Forms.Puestos
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(34, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 24);
+            this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Departamento";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -109,6 +110,7 @@ namespace PF_PROG2.Forms.Puestos
             // 
             this.dgvPuestos.AllowUserToAddRows = false;
             this.dgvPuestos.AllowUserToDeleteRows = false;
+            this.dgvPuestos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPuestos.Location = new System.Drawing.Point(28, 260);
             this.dgvPuestos.Name = "dgvPuestos";
@@ -119,11 +121,12 @@ namespace PF_PROG2.Forms.Puestos
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(38, 194);
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCrear.Location = new System.Drawing.Point(38, 202);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(135, 47);
+            this.btnCrear.Size = new System.Drawing.Size(135, 39);
             this.btnCrear.TabIndex = 12;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -142,8 +145,10 @@ namespace PF_PROG2.Forms.Puestos
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -151,6 +156,7 @@ namespace PF_PROG2.Forms.Puestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(566, 432);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.dgvPuestos);
@@ -163,7 +169,7 @@ namespace PF_PROG2.Forms.Puestos
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPuestosCrear";
-            this.Text = "frmPuestosCrear";
+            this.Text = "Crear Puestos";
             this.Load += new System.EventHandler(this.frmPuestosCrear_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
             this.menuStrip1.ResumeLayout(false);

@@ -43,7 +43,7 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Crimson;
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Location = new System.Drawing.Point(491, 400);
@@ -67,6 +67,7 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // dgvPrioridades
             // 
+            this.dgvPrioridades.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPrioridades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrioridades.Location = new System.Drawing.Point(30, 223);
             this.dgvPrioridades.Name = "dgvPrioridades";
@@ -77,7 +78,7 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // txtIdPrioridad
             // 
-            this.txtIdPrioridad.Location = new System.Drawing.Point(58, 167);
+            this.txtIdPrioridad.Location = new System.Drawing.Point(30, 167);
             this.txtIdPrioridad.Name = "txtIdPrioridad";
             this.txtIdPrioridad.ReadOnly = true;
             this.txtIdPrioridad.Size = new System.Drawing.Size(229, 20);
@@ -87,10 +88,10 @@ namespace PF_PROG2.Forms.Prioridades
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 140);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 24);
+            this.label2.Size = new System.Drawing.Size(151, 24);
             this.label2.TabIndex = 17;
             this.label2.Text = "Id de la Prioridad";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -119,8 +120,10 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -128,6 +131,7 @@ namespace PF_PROG2.Forms.Prioridades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(633, 450);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label3);
@@ -137,7 +141,7 @@ namespace PF_PROG2.Forms.Prioridades
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmPrioridadesEliminar";
-            this.Text = "frmPrioridadesEliminar";
+            this.Text = "Eliminar Prioridad";
             this.Load += new System.EventHandler(this.frmPrioridadesEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrioridades)).EndInit();
             this.menuStrip1.ResumeLayout(false);

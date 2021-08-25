@@ -43,7 +43,7 @@ namespace PF_PROG2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 67);
+            this.label1.Location = new System.Drawing.Point(159, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 24);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace PF_PROG2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 146);
+            this.label2.Location = new System.Drawing.Point(133, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 24);
             this.label2.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace PF_PROG2
             // 
             // txtNombreDtp
             // 
-            this.txtNombreDtp.Location = new System.Drawing.Point(119, 150);
+            this.txtNombreDtp.Location = new System.Drawing.Point(275, 166);
             this.txtNombreDtp.Name = "txtNombreDtp";
             this.txtNombreDtp.Size = new System.Drawing.Size(157, 20);
             this.txtNombreDtp.TabIndex = 2;
@@ -71,11 +71,12 @@ namespace PF_PROG2
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Goldenrod;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(170, 241);
+            this.button2.BackColor = System.Drawing.Color.MediumBlue;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(297, 262);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 47);
+            this.button2.Size = new System.Drawing.Size(135, 34);
             this.button2.TabIndex = 4;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
@@ -87,24 +88,28 @@ namespace PF_PROG2
             this.regresarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(364, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(548, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // regresarToolStripMenuItem
             // 
+            this.regresarToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.regresarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regresarToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.regresarToolStripMenuItem.Name = "regresarToolStripMenuItem";
-            this.regresarToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.regresarToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.regresarToolStripMenuItem.Text = "Regresar";
             this.regresarToolStripMenuItem.Click += new System.EventHandler(this.regresarToolStripMenuItem_Click);
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(29, 241);
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(122, 262);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(135, 47);
+            this.btnCrear.Size = new System.Drawing.Size(135, 34);
             this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -114,16 +119,19 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 385);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(548, 385);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtNombreDtp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmDepartamentoCrear";
-            this.Text = "frmDepartamentoCrear";
+            this.Text = "Crear Departamentos";
+            this.Load += new System.EventHandler(this.frmDepartamentoCrear_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

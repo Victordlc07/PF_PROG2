@@ -58,15 +58,14 @@ namespace PF_PROG2
             this.cbPrioridades.Name = "cbPrioridades";
             this.cbPrioridades.Size = new System.Drawing.Size(121, 21);
             this.cbPrioridades.TabIndex = 0;
-            this.cbPrioridades.SelectedIndexChanged += new System.EventHandler(this.cbUsuario_SelectedIndexChanged);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(165, 207);
+            this.btnCancelar.Location = new System.Drawing.Point(169, 222);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 32);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -81,7 +80,6 @@ namespace PF_PROG2
             this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Usuario afectado";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -92,7 +90,6 @@ namespace PF_PROG2
             this.label1.Size = new System.Drawing.Size(172, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Crear Incidente";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -103,27 +100,26 @@ namespace PF_PROG2
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Prioridad";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dgvIncidente
             // 
             this.dgvIncidente.AllowUserToAddRows = false;
             this.dgvIncidente.AllowUserToDeleteRows = false;
+            this.dgvIncidente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvIncidente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIncidente.Location = new System.Drawing.Point(24, 260);
+            this.dgvIncidente.Location = new System.Drawing.Point(24, 283);
             this.dgvIncidente.Name = "dgvIncidente";
             this.dgvIncidente.ReadOnly = true;
-            this.dgvIncidente.Size = new System.Drawing.Size(519, 152);
+            this.dgvIncidente.Size = new System.Drawing.Size(519, 129);
             this.dgvIncidente.TabIndex = 11;
-            this.dgvIncidente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncidente_CellContentClick);
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(28, 207);
+            this.btnCrear.Location = new System.Drawing.Point(24, 222);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(135, 47);
+            this.btnCrear.Size = new System.Drawing.Size(135, 32);
             this.btnCrear.TabIndex = 12;
             this.btnCrear.Text = "Crear";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -138,12 +134,13 @@ namespace PF_PROG2
             this.menuStrip1.Size = new System.Drawing.Size(587, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -158,16 +155,17 @@ namespace PF_PROG2
             // cbUsuarioasig
             // 
             this.cbUsuarioasig.FormattingEnabled = true;
-            this.cbUsuarioasig.Location = new System.Drawing.Point(165, 137);
+            this.cbUsuarioasig.Location = new System.Drawing.Point(165, 140);
             this.cbUsuarioasig.Name = "cbUsuarioasig";
             this.cbUsuarioasig.Size = new System.Drawing.Size(121, 21);
             this.cbUsuarioasig.TabIndex = 15;
+            this.cbUsuarioasig.SelectedIndexChanged += new System.EventHandler(this.cbUsuarioasig_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 135);
+            this.label4.Location = new System.Drawing.Point(20, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 20);
             this.label4.TabIndex = 16;
@@ -229,6 +227,7 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(587, 432);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label7);

@@ -45,8 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0-preview.7.21377.19\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
@@ -55,8 +55,8 @@
     <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
-    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0-preview.7.21377.19\lib\net461\System.Security.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
@@ -114,6 +114,7 @@
     <Compile Include="Forms\frmHistorialIncidente.Designer.cs">
       <DependentUpon>frmHistorialIncidente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Incidente\eliminar.cs" />
     <Compile Include="Forms\Incidente\frmIncidenteCrear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,35 +248,7 @@
       <DependentUpon>frmUsuariosEliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\IGenericRepository.cs" />
-    <Compile Include="Migrations\202108122040194_Inicial.cs" />
-    <Compile Include="Migrations\202108122040194_Inicial.designer.cs">
-      <DependentUpon>202108122040194_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108150035589_mejoras.cs" />
-    <Compile Include="Migrations\202108150035589_mejoras.designer.cs">
-      <DependentUpon>202108150035589_mejoras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108211522334_fechacierre_null.cs" />
-    <Compile Include="Migrations\202108211522334_fechacierre_null.designer.cs">
-      <DependentUpon>202108211522334_fechacierre_null.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OperationResult.cs" />
-    <Compile Include="PFDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PFDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PFDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PFDBDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="PFDBDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PFDBDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DepartamentoRepository.cs" />
@@ -367,15 +340,6 @@
     <EmbeddedResource Include="Forms\Usuarios\frmUsuariosEliminar.resx">
       <DependentUpon>frmUsuariosEliminar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108122040194_Inicial.resx">
-      <DependentUpon>202108122040194_Inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108150035589_mejoras.resx">
-      <DependentUpon>202108150035589_mejoras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108211522334_fechacierre_null.resx">
-      <DependentUpon>202108211522334_fechacierre_null.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -384,41 +348,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="PFDBDataSet.xsc">
-      <DependentUpon>PFDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PFDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PFDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PFDBDataSet.xss">
-      <DependentUpon>PFDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PFDBDataSet1.xsc">
-      <DependentUpon>PFDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PFDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PFDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PFDBDataSet1.xss">
-      <DependentUpon>PFDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="PFDBDataSet2.xsc">
-      <DependentUpon>PFDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="PFDBDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PFDBDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PFDBDataSet2.xss">
-      <DependentUpon>PFDBDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -430,9 +363,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Resources\Primera.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\en todas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

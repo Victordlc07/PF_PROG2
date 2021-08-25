@@ -179,11 +179,12 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(361, 245);
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCrear.Location = new System.Drawing.Point(361, 257);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(135, 47);
+            this.btnCrear.Size = new System.Drawing.Size(135, 35);
             this.btnCrear.TabIndex = 45;
             this.btnCrear.Text = "Actualizar";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -193,6 +194,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(25, 313);
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -213,11 +215,12 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(502, 246);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Location = new System.Drawing.Point(502, 258);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 35);
             this.btnCancelar.TabIndex = 42;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -270,8 +273,10 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -279,6 +284,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(673, 478);
             this.Controls.Add(this.txtFechaNacimiento);
             this.Controls.Add(this.txtContrasena);
@@ -304,7 +310,7 @@ namespace PF_PROG2.Forms.Usuarios
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmUsuariosActualizar";
-            this.Text = "frmUsuariosActualizar";
+            this.Text = "Actualizar usuario";
             this.Load += new System.EventHandler(this.frmUsuariosActualizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.menuStrip1.ResumeLayout(false);

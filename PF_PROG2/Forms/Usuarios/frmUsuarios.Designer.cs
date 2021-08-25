@@ -41,16 +41,18 @@ namespace PF_PROG2.Forms.Usuarios
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bntUpdtDgv = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.Location = new System.Drawing.Point(492, 188);
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEliminar.Location = new System.Drawing.Point(492, 147);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(122, 33);
             this.btnEliminar.TabIndex = 21;
@@ -60,9 +62,10 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnActualizar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(364, 188);
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnActualizar.Location = new System.Drawing.Point(364, 147);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(122, 33);
             this.btnActualizar.TabIndex = 20;
@@ -72,9 +75,10 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(236, 188);
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCrear.Location = new System.Drawing.Point(236, 147);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(122, 33);
             this.btnCrear.TabIndex = 19;
@@ -86,8 +90,9 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(24, 237);
+            this.dgvUsuarios.Location = new System.Drawing.Point(24, 196);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.Size = new System.Drawing.Size(602, 201);
@@ -96,10 +101,10 @@ namespace PF_PROG2.Forms.Usuarios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 197);
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 24);
+            this.label2.Size = new System.Drawing.Size(169, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "Usuarios Activos";
             // 
@@ -115,6 +120,7 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem,
             this.actualizarToolStripMenuItem,
@@ -128,29 +134,31 @@ namespace PF_PROG2.Forms.Usuarios
             // 
             // crearToolStripMenuItem
             // 
+            this.crearToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
             this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            this.crearToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.crearToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.crearToolStripMenuItem.Text = "Crear";
             this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
             // 
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
+            this.eliminarToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -159,19 +167,31 @@ namespace PF_PROG2.Forms.Usuarios
             this.bntUpdtDgv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bntUpdtDgv.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntUpdtDgv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bntUpdtDgv.Location = new System.Drawing.Point(595, 27);
+            this.bntUpdtDgv.Location = new System.Drawing.Point(575, 403);
             this.bntUpdtDgv.Name = "bntUpdtDgv";
-            this.bntUpdtDgv.Size = new System.Drawing.Size(51, 59);
+            this.bntUpdtDgv.Size = new System.Drawing.Size(51, 50);
             this.bntUpdtDgv.TabIndex = 22;
             this.bntUpdtDgv.Text = "⟲";
             this.bntUpdtDgv.UseVisualStyleBackColor = false;
             this.bntUpdtDgv.Click += new System.EventHandler(this.bntUpdtDgv_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PF_PROG2.Properties.Resources.en_todas;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(654, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bntUpdtDgv);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -181,11 +201,12 @@ namespace PF_PROG2.Forms.Usuarios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmUsuarios";
-            this.Text = "frmUsuarios";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +226,6 @@ namespace PF_PROG2.Forms.Usuarios
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Button bntUpdtDgv;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

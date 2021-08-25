@@ -29,7 +29,16 @@ namespace PF_PROG2
 
         private void FillDGvIncidente() //Metodo para llenar el DGV con el metodo GetAll
         {
-            //dgvIncidentes.DataSource = incidenteRepository.GetAll().Select(x => new {x.Titulo, x.Prioridad}).ToList();
+
+            UsuarioRepository _userRepo = new UsuarioRepository();
+            var listaUser = _userRepo.GetAll();
+            List<int> listaIDUser = new List<int>();
+
+            foreach (var list in listaUser)
+            {
+                listaIDUser.Add(list.Id);
+            }
+      
             #region Acutializar_DataGridView
             var lista = incidenteRepository.GetAll();
             var lista2 = new List<DatosIncidente>();
@@ -46,10 +55,12 @@ namespace PF_PROG2
                     Titulo = item.Titulo,
                     Descripcion = item.Descripcion,
                     FechaRegisto = (DateTime)item.FechaRegistro,
+               
                 };
 
                 lista2.Add(datos);
             }
+           
 
             dgvIncidentes.DataSource = lista2;
             #endregion
@@ -69,12 +80,25 @@ namespace PF_PROG2
             }
             else
             {
+                #region ComboBox Modificado 
+                ////Llenar comboBox con los Departamentos
+                //var listaMo = usuarioRepository.GetAll();
+                //cbModificado.Items.Clear();
+                //foreach (var list in listaMo)
+                //{
+                //    cbModificado.Items.Add(list.Nombre);
+                //}
+                #endregion
+
+
                 histo.Comentario = txtComentario.Text;
                 histo.IncidenteId = Convert.ToInt32(dgvIncidentes.CurrentRow.Cells["ID"].Value);
                 histo.Borrado = 0;
                 histo.FechaRegistro = DateTime.Now;
                 histo.Estatus = "A";
+                //histo.ModificadoPor = Convert.ToInt32(listaMo[cbModificado.SelectedIndex]);
                 historialincidenteRepo.Create(histo);
+               
 
                 //Actualizar fecha de modificacion de la entidad incidentes   
                 var actualizarIncidente = incidenteRepository.FindById(Convert.ToInt32(dgvIncidentes.CurrentRow.Cells["ID"].Value));
@@ -99,35 +123,7 @@ namespace PF_PROG2
             this.Close();
         }
 
-        private void dgvIncidente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //Clase DatosPuesto para que solo salgan las propiedades listadas aqui en el DataGridView
         private class DatosIncidente
@@ -140,6 +136,11 @@ namespace PF_PROG2
             public string Titulo { get; set; }
             public string Descripcion { get; set; }
             public DateTime FechaRegisto { get; set; }
+            public int? CreadoPor { get; set; }
+            public int? ModificadoPor { get; set; }
+            public int UsuarioId { get; set; }
+
+
         }
     }
 }

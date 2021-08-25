@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PF_PROG2.Forms
 {
     public partial class frmDepartamentoActualizar : Form
     {
         DepartamentoRepository departamentoRepository = new DepartamentoRepository();
         UsuarioRepository usuarioRepository = new UsuarioRepository();
+        UsuarioRepository usurepo = new UsuarioRepository();
 
         public frmDepartamentoActualizar()
         {
@@ -38,6 +40,7 @@ namespace PF_PROG2.Forms
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            Login login1 = new Login();
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("Valor no válido o campo vacío, intentar nuevamente.");
@@ -49,8 +52,9 @@ namespace PF_PROG2.Forms
                 //Modificamos los datos necesarios del registro
                 info.Nombre = txtNombre.Text;
                 info.FechaModificacion = DateTime.Now;
-                //info.ModificadoPor = login.logueado;
-                departamentoRepository.Update(info); //llamamos el metodo update del departamentoRepository
+             //  info.po
+                    
+                    departamentoRepository.Update(info); //llamamos el metodo update del departamentoRepository
                 
                 OperationResult resultupdt = departamentoRepository.Update(info);
 

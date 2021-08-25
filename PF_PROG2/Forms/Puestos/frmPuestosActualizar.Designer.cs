@@ -52,7 +52,6 @@ namespace PF_PROG2.Forms.Puestos
             this.label3.Size = new System.Drawing.Size(311, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Seleccione el puesto que desea actualizar:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dgvPuestos
             // 
@@ -61,13 +60,13 @@ namespace PF_PROG2.Forms.Puestos
             this.dgvPuestos.Name = "dgvPuestos";
             this.dgvPuestos.Size = new System.Drawing.Size(630, 169);
             this.dgvPuestos.TabIndex = 13;
-            this.dgvPuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuestos_CellContentClick);
             this.dgvPuestos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvPuestos_MouseClick);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnActualizar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnActualizar.Location = new System.Drawing.Point(531, 200);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(124, 36);
@@ -82,7 +81,6 @@ namespace PF_PROG2.Forms.Puestos
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(229, 20);
             this.txtNombre.TabIndex = 11;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label2
             // 
@@ -93,7 +91,6 @@ namespace PF_PROG2.Forms.Puestos
             this.label2.Size = new System.Drawing.Size(214, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nuevo nombre de puesto:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // menuStrip1
             // 
@@ -104,12 +101,13 @@ namespace PF_PROG2.Forms.Puestos
             this.menuStrip1.Size = new System.Drawing.Size(684, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
@@ -122,7 +120,6 @@ namespace PF_PROG2.Forms.Puestos
             this.label1.Size = new System.Drawing.Size(197, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Actualizar Puesto";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtOldname
             // 
@@ -146,6 +143,7 @@ namespace PF_PROG2.Forms.Puestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(684, 450);
             this.Controls.Add(this.txtOldname);
             this.Controls.Add(this.label4);
@@ -157,7 +155,7 @@ namespace PF_PROG2.Forms.Puestos
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Name = "frmPuestosActualizar";
-            this.Text = "frmPuestosActualizar";
+            this.Text = "Actualizar puestos";
             this.Load += new System.EventHandler(this.frmPuestosActualizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
             this.menuStrip1.ResumeLayout(false);

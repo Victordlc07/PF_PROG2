@@ -54,8 +54,9 @@ namespace PF_PROG2
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Goldenrod;
+            this.button2.BackColor = System.Drawing.Color.MediumBlue;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Location = new System.Drawing.Point(176, 231);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 47);
@@ -76,15 +77,18 @@ namespace PF_PROG2
             // 
             // regresarToolStripMenuItem
             // 
+            this.regresarToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.regresarToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regresarToolStripMenuItem.Name = "regresarToolStripMenuItem";
-            this.regresarToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.regresarToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.regresarToolStripMenuItem.Text = "Regresar";
             this.regresarToolStripMenuItem.Click += new System.EventHandler(this.regresarToolStripMenuItem_Click);
             // 
             // btnCrear
             // 
-            this.btnCrear.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCrear.BackColor = System.Drawing.Color.MediumBlue;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCrear.Location = new System.Drawing.Point(21, 231);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(135, 47);
@@ -131,6 +135,7 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(354, 317);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescripcion);
@@ -142,7 +147,7 @@ namespace PF_PROG2
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmSLACrear";
-            this.Text = "frmSLACrear";
+            this.Text = "Crear SLA";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

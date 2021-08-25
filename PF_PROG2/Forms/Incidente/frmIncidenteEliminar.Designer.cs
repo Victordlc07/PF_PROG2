@@ -45,7 +45,7 @@ namespace PF_PROG2
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumBlue;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminar.Location = new System.Drawing.Point(468, 397);
@@ -69,6 +69,7 @@ namespace PF_PROG2
             // 
             // dgvIncidente
             // 
+            this.dgvIncidente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvIncidente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncidente.Location = new System.Drawing.Point(30, 240);
             this.dgvIncidente.Name = "dgvIncidente";
@@ -112,13 +113,16 @@ namespace PF_PROG2
             // 
             // atrásToolStripMenuItem
             // 
+            this.atrásToolStripMenuItem.BackColor = System.Drawing.Color.Azure;
+            this.atrásToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.atrásToolStripMenuItem.Name = "atrásToolStripMenuItem";
-            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.atrásToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.atrásToolStripMenuItem.Text = "Atrás";
             this.atrásToolStripMenuItem.Click += new System.EventHandler(this.atrásToolStripMenuItem_Click);
             // 
             // txtComentsol
             // 
+            this.txtComentsol.BackColor = System.Drawing.SystemColors.Control;
             this.txtComentsol.Location = new System.Drawing.Point(30, 100);
             this.txtComentsol.Name = "txtComentsol";
             this.txtComentsol.Size = new System.Drawing.Size(455, 76);
@@ -147,6 +151,7 @@ namespace PF_PROG2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(633, 467);
             this.Controls.Add(this.txtIncidente);
             this.Controls.Add(this.label4);
@@ -158,7 +163,7 @@ namespace PF_PROG2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmIncidenteEliminar";
-            this.Text = "frmIncidenteEliminar";
+            this.Text = "Eliminar incidentes";
             this.Load += new System.EventHandler(this.frmIncidenteEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncidente)).EndInit();
             this.menuStrip1.ResumeLayout(false);

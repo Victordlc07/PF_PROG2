@@ -48,6 +48,7 @@ namespace PF_PROG2
         private void button2_Click(object sender, EventArgs e)//Botón Cancelar
         {
             txtNombreDtp.Text = "";
+
         }
 
         private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +71,9 @@ namespace PF_PROG2
 
         }
 
-        
+        private void frmDepartamentoCrear_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
